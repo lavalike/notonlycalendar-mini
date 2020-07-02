@@ -5,7 +5,7 @@ Page({
     header_image_url : './images/ic_header.png',
     header_content : '',
     header_note : '',
-    current_day : new Date().getDate(),
+    current_day : util.formatTime('dd', new Date()),
     lunar_calendar : '',
     lunar_des : '',
     lunar_detail : '',
