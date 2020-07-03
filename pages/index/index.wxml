@@ -28,3 +28,8 @@
     <view class="taboo_text_suit">{{taboo_text_suit}}</view>
   </view>
 </view>
+
+<!-- 历史上的今天 -->
+<view class="history_today_container" bindtap="openHistoryToday" hover="true" hover-class="history_today_container_hover">
+  <image class="history_today_image" src="./images/ic_history.png" mode="aspectFill"/>
+</view>

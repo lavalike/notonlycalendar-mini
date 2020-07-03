@@ -21,9 +21,7 @@ Page({
    * 设置分享信息
    */
   onShareAppMessage:function(){
-    return {
-      title : '大黄历',
-    }
+    
   },
   /**
    * 初始化本地缓存
@@ -158,5 +156,13 @@ Page({
     wx.setStorageSync('lunarDetail', lunarDetail)
     wx.setStorageSync('avoid', avoid)
     wx.setStorageSync('suit', suit)
+  },
+  /**
+   * 打开历史上的今天
+   */
+  openHistoryToday(){
+    wx.navigateTo({
+      url: '../history/history',
+    })
   },
 })

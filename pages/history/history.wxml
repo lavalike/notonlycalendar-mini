@@ -1,0 +1,14 @@
+<!--pages/history/history.wxml-->
+<view wx:for="{{history_list}}" wx:key="list" >
+  <view class="history_item_container" hover="true" hover-class="history_item_container_hover">
+    <view class="history_item_text_container">
+      <text class="history_item_title">{{item.title}}</text>
+      <text class="history_item_date">{{item.year}}年{{item.month}}月{{item.day}}日</text>
+    </view>
+    <image class="history_item_image" src="{{item.picUrl ? item.picUrl : '../index/images/ic_header.png'}}" mode="aspectFill" />
+  </view>
+  <!-- 分隔线 -->
+  <view class="divider" />
+  <!-- 没有啦 -->
+  <text class="history_item_footer" wx:if="{{index >= history_list.length - 1}}">- 没有啦 -</text>
+</view>
