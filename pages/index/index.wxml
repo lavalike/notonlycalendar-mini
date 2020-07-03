@@ -20,11 +20,11 @@
 <view class="lunar_container">
   <view class="lunar_calendar">{{lunar_calendar}}</view>
   <view class="lunar_des">{{lunar_des}}</view>
-  <view class="lunar_detail">{{lunar_detail}}</view>
+  <text class="lunar_detail">{{lunar_detail}}</text> 
 </view>
 
 <!-- 分隔线 -->
-<view class="divider_large" />
+<view class="divider" />
 
 <!-- 宜、忌 -->
 <view class="taboo_container">

@@ -18,6 +18,14 @@ Page({
     this.requestLunarInfo()
   },
   /**
+   * 设置分享信息
+   */
+  onShareAppMessage:function(){
+    return {
+      title : '大黄历',
+    }
+  },
+  /**
    * 初始化本地缓存
    */
   init(){
@@ -143,7 +151,7 @@ Page({
     var suit = data.suit
     var dayOfYear = data.dayOfYear
     var weekOfYear = data.weekOfYear
-    var lunarDetail = weekdaycn +' ' + yearTips + '[' + chineseZodiac + ']年' + ' ' + solarTerms + '\n' + util.formatTime('yyyy', new Date()) + '年第' +dayOfYear + '天、第'+ weekOfYear +'周'
+    var lunarDetail = weekdaycn +' ' + yearTips + '[' + chineseZodiac + ']年' + ' ' + solarTerms + '\n ' + util.formatTime('yyyy', new Date()) + '年第' +dayOfYear + '天、第'+ weekOfYear +'周'
     //缓存本地
     wx.setStorageSync('lunarCalendar', lunarCalendar)
     wx.setStorageSync('lunarDes', lunarDes)
