@@ -1,4 +1,3 @@
-<!--index.wxml-->
 <!-- 每日一句 -->
 <view class="header_container">
   <image class="header_image_background" src="{{header_image_url}}" mode="aspectFill" />
@@ -13,29 +12,19 @@
   <view class="current_day">{{current_day}}</view>
 </view>
 
-<!-- 分隔线 -->
-<view class="divider" />
-
 <!-- 农历 -->
-<view class="lunar_container">
+<view class="shadow_container">
   <view class="lunar_calendar">{{lunar_calendar}}</view>
   <view class="lunar_des">{{lunar_des}}</view>
   <text class="lunar_detail">{{lunar_detail}}</text> 
 </view>
 
-<!-- 分隔线 -->
-<view class="divider" />
-
 <!-- 宜、忌 -->
 <view class="taboo_container">
-  <!-- 忌 -->
-  <view>
-    <image class="taboo_image_avoid" src="./images/ic_avoid.png" mode="aspectFill"></image>
-    <view class="taboo_text">{{taboo_text_avoid}}</view>
+  <view class="shadow_container">
+    <view class="taboo_text_avoid">{{taboo_text_avoid}}</view>
   </view>
-  <!-- 宜 -->
-  <view class="taboo_suit_container">
-    <image class="taboo_image_suit" src="./images/ic_suit.png" mode="aspectFill"></image>
-    <view class="taboo_text">{{taboo_text_suit}}</view>
+  <view class="shadow_container">
+    <view class="taboo_text_suit">{{taboo_text_suit}}</view>
   </view>
 </view>

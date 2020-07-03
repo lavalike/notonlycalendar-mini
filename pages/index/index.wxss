@@ -45,12 +45,10 @@
   width: 100%;
   height: 0.5rpx;
 }
-.lunar_container{
-  margin: 10px;
-}
 .lunar_calendar{
   font-size: 20px;
   color: #3b424c;
+  font-weight: bold;
   float: left;
 }
 .lunar_des{
@@ -64,21 +62,23 @@
   color: #3b424c;
   clear: both;
 }
+.shadow_container{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #008000;
+  box-shadow:rgba(0, 132, 255, 0.1) 0px 0px 20px;
+}
 .taboo_container{
-  margin: 10px;
+  padding-bottom: 15px;
 }
-.taboo_image_avoid{
-  width: 30px;
-  height: 30px;
-}
-.taboo_image_suit{
-  width: 30px;
-  height: 30px;
-}
-.taboo_suit_container{
-  margin-top: 10px;
-}
-.taboo_text{
+.taboo_text_avoid{
   font-size: 15px;
-  color: #3b424c;
+  color: rgba(255, 0, 0, 0.5);
+}
+.taboo_text_suit{
+  font-size: 15px;
+  color: rgba(0, 128, 0, 0.5);
 }
