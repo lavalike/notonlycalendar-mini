@@ -31,8 +31,16 @@ Page({
         'type' : 0 //type：是否需要详情，0：不需要详情 1：需要详情 默认值 0 可不传
       },
       success (res) {
+        let array = res.data.data
+        //配置默认图片
+        for (let index = 0; index < array.length; index++) {
+          const element = array[index];
+          if(!element.picUrl){
+            element.picUrl = '../index/images/ic_header.png'
+          }
+        }
         that.setData({
-          history_list : res.data.data
+          history_list : array
         })
       },
       fail (res) {
