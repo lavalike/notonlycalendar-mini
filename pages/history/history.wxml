@@ -1,14 +1,17 @@
 <!--pages/history/history.wxml-->
-<view wx:for="{{history_list}}" wx:key="list" >
-  <view class="history_item_container" hover="true" hover-class="history_item_container_hover">
-    <view class="history_item_text_container">
-      <text class="history_item_title">{{item.title}}</text>
-      <text class="history_item_date">{{item.year}}年{{item.month}}月{{item.day}}日</text>
-    </view>
-    <image class="history_item_image" src="{{item.picUrl}}" mode="aspectFill" lazy-load="true" />
-  </view>
-  <!-- 分隔线 -->
-  <view class="divider" />
-  <!-- 没有啦 -->
-  <text class="history_item_footer" wx:if="{{index >= history_list.length - 1}}">- 没有啦 -</text>
+<!-- 配置+标题 -->
+<view class="image_container">
+  <image class="image_placeholder" src="../index/images/ic_header.png" mode="aspectFill"></image>
+  <image class="image_placeholder" src="{{item.picUrl}}" mode="aspectFill"></image>
+  <text class="image_title">{{item.title}}</text>
+</view>
+<!-- 详情 -->
+<view class="details_container">
+  <view class="details">{{item.details}}</view>
+</view>
+<!-- 日期 -->
+<text class="date">{{item.year}}年{{item.month}}月{{item.day}}日</text>
+<!-- 下一条 -->
+<view class="next_container" hover-class="next_container_hover" bindtap="next">
+  <image class="next_image" src="./images/ic_refresh.png" mode="aspectFill" />
 </view>

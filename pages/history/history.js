@@ -6,6 +6,8 @@ Page({
    */
   data: {
     history_list : [],
+    index : 0,
+    item : '',
   },
 
   /**
@@ -28,27 +30,34 @@ Page({
         'app_secret' : 'aVBrU2pBSTJFY3c3aUZVMjZMbW1Wdz09',
       },
       data : {
-        'type' : 0 //type：是否需要详情，0：不需要详情 1：需要详情 默认值 0 可不传
+        'type' : 1 //type：是否需要详情，0：不需要详情 1：需要详情 默认值 0 可不传
       },
       success (res) {
-        let array = res.data.data
-        //配置默认图片
-        for (let index = 0; index < array.length; index++) {
-          const element = array[index];
-          if(!element.picUrl){
-            element.picUrl = '../index/images/ic_header.png'
-          }
-        }
-        that.setData({
-          history_list : array
-        })
+        that.data.history_list = res.data.data
+        that.data.index = 0
+        that.next()
       },
       fail (res) {
         console.log(JSON.stringify(res))
-      },
-      complete (res) {
-        wx.stopPullDownRefresh()
       }
+    })
+  },
+
+  /**
+   * 显示下一条新闻
+   */
+  next(){
+    var array = this.data.history_list
+    if(array.length == 0){
+      return
+    }
+    var index = this.data.index
+    if(index < 0 || index > array.length - 1){
+      index = 0
+    }
+    this.data.index = index + 1
+    this.setData({
+      item : array[index]
     })
   },
 
@@ -84,7 +93,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.request()
+    
   },
 
   /**

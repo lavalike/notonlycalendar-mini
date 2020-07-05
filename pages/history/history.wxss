@@ -1,50 +1,67 @@
 /* pages/history/history.wxss */
-.history_item_container{
-  padding: 10px;
-  display: flex;
-}
-.history_item_container_hover{
-  background: #eeeeee;
-}
-.divider{
-  width: 100%;
-  height: 0.5rpx;
-  background: #ededed;
-}
-.history_item_text_container{
-  flex: 1;
-  margin-right: 10px;
-  display: flex;
-  flex-flow: column;
-  position: relative;
-}
-.history_item_title{
-  color: #3b424c;
-  font-size: 16px;
-  font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.history_item_date{
-  position: absolute;
-  bottom: 0px;
-  color: #838383;
-  font-size: 12px;
-  margin-top: 10px;
-}
-.history_item_image{
-  width: 113px;
-  height: 75px;
-  border-radius: 3.5px;
-}
-.history_item_footer{
-  font-size: 12px;
-  color: #cccccc;
-  padding: 15px;
+/* 悬浮刷新按钮 */
+.next_container{
+  width: 55px;
+  height: 55px;
+  background: #2196F3;
+  position: fixed;
+  border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow:rgba(0, 132, 255, 0.8) 0px 0px 20px;
+  bottom: 30px;
+  right: 15px;
+}
+.next_container_hover{
+  background: #2195f3cc;
+}
+.next_image{
+  width: 25px;
+  height: 25px;
+}
+/* 悬浮日期 */
+.date{
+  position: fixed;
+  right: 15px;
+  bottom: 90px;
+  color: white;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background: #2196F3;
+  border-radius: 3.5px;
+  box-shadow:rgba(0, 132, 255, 0.8) 0px 0px 20px;
+}
+/* 配图 */
+.image_container{
+  height: 200px;
+  position: relative;
+}
+.image_placeholder{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.image_title{
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.details_container{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 130px;
+}
+.details{
+  color: #3b424c;
+  font-size: 16px;
+  text-indent: 2em;
 }

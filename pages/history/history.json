@@ -1,8 +1,5 @@
 {
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#2196F3",
-  "navigationBarTitleText": "历史上的今天",
+  "navigationStyle": "custom",
   "navigationBarTextStyle": "white",
-  "enablePullDownRefresh": true,
   "usingComponents": {}
 }
