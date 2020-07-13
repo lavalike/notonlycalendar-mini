@@ -110,5 +110,13 @@ Page({
     return {
       title : '历史上的今天'
     }
-  }
+  },
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline(){
+    return {
+      title : '历史上的今天'
+    }
+  },
 })

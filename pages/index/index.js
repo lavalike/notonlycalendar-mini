@@ -21,7 +21,17 @@ Page({
    * 设置分享信息
    */
   onShareAppMessage:function(){
-    
+    return {
+      title : '大黄历'
+    }
+  },
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline(){
+    return {
+      title : '大黄历'
+    }
   },
   /**
    * 初始化本地缓存
